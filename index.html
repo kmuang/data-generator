@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Data Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <h2>Fake Data Generator</h2>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h1>Generate Fake Data</h1>
+
+      <h3>Select Number of Records:</h3>
+      <input type="number" id="numRecords" min="1" max="10" value="1" />
+
+      <div class="grid-container">
+        <!-- Left Side: Data Fields -->
+        <div class="grid-item">
+          <h3>Data Fields:</h3>
+          <div class="options">
+            <label><input type="checkbox" id="name" checked /> Name</label>
+            <label><input type="checkbox" id="email" checked /> Email</label>
+            <label><input type="checkbox" id="phone" checked /> Phone</label>
+            <label
+              ><input type="checkbox" id="address" checked /> Address</label
+            >
+            <label><input type="checkbox" id="job" checked /> Job Title</label>
+            <label
+              ><input type="checkbox" id="company" checked /> Company</label
+            >
+          </div>
+        </div>
+
+        <!-- Right Side: Output Format -->
+        <div class="grid-item">
+          <h3>Output Format:</h3>
+          <div class="options">
+            <label
+              ><input type="radio" name="format" value="json" checked />
+              JSON</label
+            >
+            <label
+              ><input type="radio" name="format" value="html" /> HTML</label
+            >
+            <label
+              ><input type="radio" name="format" value="javascript" />
+              JavaScript</label
+            >
+            <label
+              ><input type="radio" name="format" value="python" /> Python</label
+            >
+            <label><input type="radio" name="format" value="csv" /> CSV</label>
+            <label><input type="radio" name="format" value="sql" /> SQL</label>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="generateFakeData()">Generate Data</button>
+
+      <div id="output-container"></div>
+    </div>
+    <!-- Alert Container (for notifications) -->
+    <div class="alert-container"></div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Fake Data Generator | Designed for Developers</p>
+      <div class="footer__icons">
+        <a href="https://github.com/SawSimonLinn"
+          ><i class="fab fa-github"></i
+        ></a>
+
+        <a href="https://www.linkedin.com/in/sawsimonlinn/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+
+        <a href="https://www.instagram.com/sawsimonlinn"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
