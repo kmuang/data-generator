@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Generator</title>
+    <link rel="icon" type="image/jpeg" href="assets/km-logo.jpeg" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="brand">
+        <img src="assets/km-logo.jpeg" alt="" class="brand__logo" />
+        <h2>Data Generator</h2>
+      </div>
+      <button id="theme-toggle" type="button" aria-label="Switch to dark mode">🌙</button>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+      <h1>Generate Sample Data</h1>
+
+      <label for="numRecords">Select Number of Records:</label>
+      <input type="number" id="numRecords" min="1" max="10" step="1" value="1" />
+
+      <div class="grid-container">
+        <!-- Left Side: Data Fields -->
+        <div class="grid-item">
+          <h3>Data Fields:</h3>
+          <div class="options">
+            <label><input type="checkbox" id="name" checked /> Name</label>
+            <label><input type="checkbox" id="email" checked /> Email</label>
+            <label><input type="checkbox" id="phone" checked /> Phone</label>
+            <label
+              ><input type="checkbox" id="address" checked /> Address</label
+            >
+            <label><input type="checkbox" id="job" checked /> Job Title</label>
+            <label
+              ><input type="checkbox" id="company" checked /> Company</label
+            >
+            <label
+              ><input type="checkbox" id="username" checked /> Username</label
+            >
+            <label
+              ><input type="checkbox" id="website" checked /> Website</label
+            >
+            <label
+              ><input type="checkbox" id="birthdate" checked /> Birth date</label
+            >
+            <label><input type="checkbox" id="country" checked /> Country</label>
+            <label><input type="checkbox" id="age" checked /> Age</label>
+            <label><input type="checkbox" id="city" checked /> City</label>
+            <label><input type="checkbox" id="race" checked /> Race</label>
+            <label><input type="checkbox" id="salaryUsd" checked /> Salary (USD)</label>
+          </div>
+        </div>
+
+        <!-- Right Side: Output Format -->
+        <div class="grid-item">
+          <h3>Output Format</h3>
+          <div class="options format-options">
+            <label
+              ><input type="radio" name="format" value="json" checked />
+              JSON</label
+            >
+            <label><input type="radio" name="format" value="yaml" /> YAML</label>
+            <label
+              ><input type="radio" name="format" value="typescript" />
+              TypeScript</label
+            >
+            <label
+              ><input type="radio" name="format" value="python" /> Python</label
+            >
+            <label
+              ><input type="radio" name="format" value="javascript" />
+              JavaScript</label
+            >
+            <label><input type="radio" name="format" value="sql" /> SQL</label>
+            <label
+              ><input type="radio" name="format" value="html" /> HTML</label
+            >
+            <label><input type="radio" name="format" value="text" /> Plain text</label>
+          </div>
+        </div>
+      </div>
+
+      <button id="generate-button" type="button">Generate Data</button>
+
+      <div id="output-container"></div>
+    </main>
+    <!-- Alert Container (for notifications) -->
+    <div class="alert-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
